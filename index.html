@@ -16,8 +16,9 @@
 </head>
 <body>
 
-      <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal -->
+    <!-- Sign Up  -->
+    <div class="modal fade" id="SignUpModal" tabindex="-1" role="dialog" aria-labelledby="SignUpModalLabel" aria-hidden="true" style="overflow-y: inherit;">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center">
@@ -74,11 +75,59 @@
                     </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
-                    <span>Already have an account?</span><a class="font-weight-bold text-dark">Log in</a>
+                    <span>Already have an account?</span><a class="font-weight-bold text-dark" data-dismiss="modal" data-toggle="modal" data-target="#LogInModal">Log in</a>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Log in  -->
+    <div class="modal fade" id="LogInModal" tabindex="-1" role="dialog" aria-labelledby="LogInLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <div class="col text-center">
+                        <h2 class="modal-title w-100 font-weight-bold">Welcome back!</h2>
+                        <h5 class= "w-100">Log in to continue</h5>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-md-5">
+                    <div class="mb-4">
+                        <label data-error="wrong" data-success="right" for="orangeForm-email">Email</label>
+                        <input type="email" id="orangeForm-email" class="form-control validate" placeholder="Your email">
+                    </div>
+                    <div class="mb-4">
+                        <label data-error="wrong" data-success="right" for="orangeForm-pass">Password</label>
+                        <input type="password" id="orangeForm-pass" class="form-control validate" placeholder="Your password">
+                        <div class="d-flex justify-content-end"> 
+                            <a class="coll-link small-text" href="#">Forgot your password?</a>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn bg-orange no-boxShadow ml-1 font-weight-bold text-uppercase"  style="width: 100%; border: #ff3d00;">Create an account</button>
+                    </div>
+                    <div class="my-2 light-gray justify-content-center d-flex text-center">
+                        OR
+                    </div>
+                    <div>
+                        <button type="submit" class="facebook-btn no-boxShadow btn ml-1 font-weight-bold text-uppercase"  style="width: 100%; border: #ff3d00;">
+                            <i class="fa fa-facebook-f fa-lg black-text mr-md-3 mr-3 fa-2x"> </i><span>Continue with Facebook</span>
+                        </button>
+                    </div>
+                    <div class="light-gray small-text d-flex justify-content-center">
+                        No posts without your permission.
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <span>Already have an account?</span><a data-toggle="modal" data-dismiss="modal" data-target="#SignUpModal" class="font-weight-bold text-dark">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- /Modal -->
+
     <!-- Navbar  -->
     <nav class="navbar navbar-expand-xl fixed-top" style="background-color: #fdfdfd;">
         <div>
@@ -97,8 +146,8 @@
                 <li class="nav-item"><a href="#" class="nav-link">For Entrepreneurs</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Start a Campaign</a> </li>
                 <div class="nav-item d-none d-lg-block border-left"></div>
-                <li class="nav-item"><a href="#" id="" class="nav-link">Log in</a></li>
-                <li class="nav-item"><a href="#" id="" class="nav-link">Sign up</a></li>
+                <li class="nav-item"><a href="#" id="" data-toggle="modal" data-target="#LogInModal" class="nav-link">Log in</a></li>
+                <li class="nav-item"><a href="#" id="" data-toggle="modal" data-target="#SignUpModal" class="nav-link">Sign up</a></li>
             </ul>
         </div>
     </nav>
@@ -114,7 +163,7 @@
             </div>
             <div class="form-group row card-boton">
                 <div class="col-12">
-                    <button type="button" class="btn bg-orange" style="border: #ff3d00;" data-toggle="modal" data-target="#exampleModal">SIGN UP NOW</button>
+                    <button type="button" class="btn bg-orange" style="border: #ff3d00;" data-toggle="modal" data-target="#SignUpModal">SIGN UP NOW</button>
                     <button class="btn btn-gris text-orange">LEARN MORE</button>
                 </div> 
             </div>
@@ -130,7 +179,7 @@
                         <p class="card-text">Brawels is where early adopters and innovation seekers find lively, imaginative tech before it hits the mainstream.</p>
                         <div class="form-group row card-boton">
                             <div class="col-12">
-                                <button type="button" class="btn bg-orange" style="border: #ff3d00;" data-toggle="modal" data-target="#exampleModal">SIGN UP NOW</button>
+                                <button type="button" class="btn bg-orange" style="border: #ff3d00;" data-toggle="modal" data-target="#SignUpModal">SIGN UP NOW</button>
                                 <button type="button" class="btn btn-gris text-orange">LEARN MORE</button>
                             </div> 
                         </div>
@@ -641,7 +690,7 @@
                         Discover projects just for you and get great recommendations when you select your interests.
                     </div>
                     <div class="d-flex justify-content-center my-3">
-                        <button data-toggle="modal" data-target="#exampleModal" class="btn col-8 col-md-5 text-center p-2 text-uppercase"  style="font-size: 12px;">
+                        <button data-toggle="modal" data-target="#SignUpModal" class="btn col-8 col-md-5 text-center p-2 text-uppercase"  style="font-size: 12px;">
                             Sign up and Select Interests
                         </button>
                     </div>
@@ -799,7 +848,7 @@
                             There’s no better place to start the hunt for something new and special. Begin on Brawels to find clever and unconventional things that solve everyday problems large and small.
                         </div>
                         <div class="d-flex justify-content-center my-3">
-                            <button data-toggle="modal" data-target="#exampleModal" type="submit" class="btn text-center px-3 px-md-5 text-uppercase bg-orange"  style="font-size: 14px;">
+                            <button data-toggle="modal" data-target="#SignUpModal" type="submit" class="btn text-center px-3 px-md-5 text-uppercase bg-orange"  style="font-size: 14px;">
                                 Sign up now
                             </button>
                             <button type="submit" class="btn text-center px-3 px-md-5 text-uppercase color-orange"  style="font-size: 14px;">
