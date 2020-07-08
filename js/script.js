@@ -1,6 +1,6 @@
 // carousel 1 
 $(document).ready(function() {
-    $('#carouselFunction').carousel({ interval: 5000 });
+    $('#carouselFunction').carousel({ interval: 3000 });
     $('[data-toggle="tooltip"]').tooltip();
 });
 
@@ -19,6 +19,4 @@ var next = $(this).next();
     }
     next.children(':first-child').clone().appendTo($(this));
   }
-
-
 });
